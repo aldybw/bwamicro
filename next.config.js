@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+// const nextConfig = {
+//   reactStrictMode: true,
+// };
 const withPlugins = require("next-compose-plugins");
 const withCss = require("@zeit/next-css");
 const withReactSvg = require("next-react-svg");
@@ -9,7 +9,7 @@ const withImages = require("next-images");
 
 const path = require("path");
 
-withPlugins([
+module.exports = withPlugins([
   withCss({}),
   withImages({}),
   withReactSvg({
@@ -19,5 +19,3 @@ withPlugins([
     },
   }),
 ]);
-
-module.exports = { nextConfig, withPlugins };

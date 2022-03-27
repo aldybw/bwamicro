@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import axios from "configs/axios";
+import axios from "src/configs/axios";
 
-function Home(props) {
-  console.log(props);
+import Circle from "public/images/circle-accent-1.svg";
+
+function Home({ data }) {
   return (
     <div className="container mx-auto mt-4">
       <Head>
@@ -14,10 +15,9 @@ function Home(props) {
       </Head>
 
       <main>
-        <h1>Saya halaman utama</h1>
-        <Link href="/courses">
-          <a>Bring me to fetch courses page!</a>
-        </Link>
+        <section className="pt-10">
+          <Circle className="absolute left-0 bottom-0"></Circle>
+        </section>
       </main>
     </div>
   );
