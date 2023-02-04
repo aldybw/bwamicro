@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link
           rel="shortcut icon"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}/images.logo.png`}
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
         />
       </Head>
       <body>

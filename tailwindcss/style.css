@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+section {
+  padding: 2.5rem;
+}
+
 .header-clipping {
   @apply .relative;
 }
