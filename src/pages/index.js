@@ -10,6 +10,7 @@ import Hero from "parts/Hero";
 import Clients from "parts/Clients";
 import ListCourses from "parts/ListCourses";
 import ListCategories from "parts/ListCategories";
+import Footer from "parts/Footer";
 
 function Home({ data }) {
   console.log(data);
@@ -32,10 +33,13 @@ function Home({ data }) {
           <Clients></Clients>
         </section>
         <section className="container mx-auto pt-24">
-          <ListCourses data={data}></ListCourses>
+          <ListCourses></ListCourses>
         </section>
         <section className="container mx-auto pt-24">
           <ListCategories></ListCategories>
+        </section>
+        <section className="mt-24 bg-indigo-1000 py-12">
+          <Footer></Footer>
         </section>
       </main>
     </>

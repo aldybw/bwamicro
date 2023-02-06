@@ -2,7 +2,29 @@ import React from "react";
 import Link from "next/link";
 import RenderItem from "./RenderItem";
 
-export default function ListCourses({ data }) {
+export default function ListCourses() {
+  const data = [
+    {
+      thumbnail: "/images/courses-graphic-designer-101.jpg",
+      name: "Graphic Designer 101",
+      level: "All Levels",
+    },
+    {
+      thumbnail: "/images/courses-start-vlogging.jpg",
+      name: "Start Vlogging",
+      level: "Beginner",
+    },
+    {
+      thumbnail: "/images/courses-graphic-designer-101.jpg",
+      name: "Graphic Designer 101",
+      level: "All Levels",
+    },
+    {
+      thumbnail: "/images/courses-start-vlogging.jpg",
+      name: "Start Vlogging",
+      level: "Beginner",
+    },
+  ];
   return (
     <>
       <div className="flex justify-between items-center">

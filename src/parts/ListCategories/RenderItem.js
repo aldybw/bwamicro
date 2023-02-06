@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import formatThousand from "../helpers/formatThousand";
+import formatThousand from "../../helpers/formatThousand";
 
 export default function RenderItem({ item }) {
   return (
