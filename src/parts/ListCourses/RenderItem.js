@@ -1,15 +1,29 @@
-import IconPlay from "public/images/icon_play.svg";
+import IconPlay from "public/images/icon-play.svg";
+import Img from "next/image";
+import Link from "next/link";
 
 export default function RenderItem({ item }) {
   return (
     <div className="w-1/4 px-4">
-      <div className="item">
-        <div className="item-image">
-          <img
+      <div className="item relative">
+        <figure className="item-image">
+          <IconPlay></IconPlay>
+          <Img
             src={item?.thumbnail ?? ""}
-            alt={data?.name ?? "some information"}
+            alt={item?.name ?? "some information"}
           />
+        </figure>
+        <div className="item-meta mt-2">
+          <h4 className="text-lg text-gray-900">
+            {item?.name ?? "Course name"}
+          </h4>
+          <h4 className="text-sm text-gray-600">
+            {item?.level ?? "Course level"}
+          </h4>
         </div>
+        <Link href="/courses/[slug]" as={`courses/${item?.id}`}>
+          <a className="link-wrapped"></a>
+        </Link>
       </div>
     </div>
   );

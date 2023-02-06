@@ -1,16 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import axios from "src/configs/axios";
+import axios from "configs/axios";
 
 import Circle from "public/images/circle-accent-1.svg";
 
-import Header from "src/parts/Header";
-import Hero from "src/parts/Hero";
-import Clients from "src/parts/Clients";
-import ListCourses from "src/parts/ListCourses";
+import Header from "parts/Header";
+import Hero from "parts/Hero";
+import Clients from "parts/Clients";
+import ListCourses from "parts/ListCourses";
 
 function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
