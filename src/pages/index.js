@@ -3,12 +3,13 @@ import Link from "next/link";
 
 import axios from "configs/axios";
 
-import Circle from "public/images/circle-accent-1.svg";
+import Circle from "../../public/images/circle-accent-1.svg";
 
 import Header from "parts/Header";
 import Hero from "parts/Hero";
 import Clients from "parts/Clients";
 import ListCourses from "parts/ListCourses";
+import ListCategories from "parts/ListCategories";
 
 function Home({ data }) {
   console.log(data);
@@ -32,6 +33,9 @@ function Home({ data }) {
         </section>
         <section className="container mx-auto pt-24">
           <ListCourses data={data}></ListCourses>
+        </section>
+        <section className="container mx-auto pt-24">
+          <ListCategories></ListCategories>
         </section>
       </main>
     </>
