@@ -1,7 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from "react";
 
 export default function Hero() {
-  function submit() {}
+  const [state, setState] = useState(() => "");
+  function submit() {
+    window.open(
+      `${process.env.NEXT_PUBLIC_MEMBERPAGE_URL}/register?email=${state}`
+    );
+  }
   return (
     <div className="flex justify-between items-center">
       <div className="w-1/2">
@@ -16,7 +22,9 @@ export default function Hero() {
         <form onSubmit={submit}>
           <input
             type="text"
-            className="bg-white focus:outline-none border-0 px-6 py-3 w-1/2"
+            onChange={(event) => setState(event.target.value)}
+            className="bg-white focus:outline-none border-0 px-6 py-3 mt-6"
+            value={state}
             placeholder="Your email address"
           />
           <button className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-6 py-3">
