@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import IconPlay from "public/images/icon-play.svg";
+import IconPlay from "../../../public/images/icon-play.svg";
 
 export default function RenderItem({ item }) {
   return (

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Link from "next/link";
 
-import Logo from "public/images/logo.svg";
+import Logo from "../../public/images/logo.svg";
 
 export default function Header({ onLight }) {
   const linkColor = onLight ? "text-gray-900" : "text-white";

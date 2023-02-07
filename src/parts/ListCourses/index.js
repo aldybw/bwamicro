@@ -2,29 +2,106 @@ import React from "react";
 import Link from "next/link";
 import RenderItem from "./RenderItem";
 
+export const data = [
+  {
+    id: 1,
+    thumbnail: "/images/courses-graphic-designer-101.jpg",
+    name: "Graphic Designer 101",
+    level: "All Levels",
+    chapters: [
+      {
+        id: 4,
+        course_id: 1,
+        lessons: [
+          {
+            chapter_id: 4,
+            id: 1,
+            name: "Introduction",
+            video: "MiiANxRHSv4",
+          },
+        ],
+        name: "Getting Started",
+      },
+    ],
+    total_student: 15,
+    total_videos: 1456,
+    certificate: 1,
+  },
+  {
+    id: 2,
+    thumbnail: "/images/courses-start-vlogging.jpg",
+    name: "Start Vlogging",
+    level: "Beginner",
+    chapters: [
+      {
+        id: 4,
+        course_id: 1,
+        lessons: [
+          {
+            chapter_id: 4,
+            id: 1,
+            name: "Introduction",
+            video: "MiiANxRHSv4",
+          },
+        ],
+        name: "Getting Started",
+      },
+    ],
+    total_student: 15,
+    total_videos: 1456,
+    certificate: 1,
+  },
+  {
+    id: 3,
+    thumbnail: "/images/courses-graphic-designer-101.jpg",
+    name: "Graphic Designer 101",
+    level: "All Levels",
+    chapters: [
+      {
+        id: 4,
+        course_id: 1,
+        lessons: [
+          {
+            chapter_id: 4,
+            id: 1,
+            name: "Introduction",
+            video: "MiiANxRHSv4",
+          },
+        ],
+        name: "Getting Started",
+      },
+    ],
+    total_student: 15,
+    total_videos: 1456,
+    certificate: 1,
+  },
+  {
+    id: 4,
+    thumbnail: "/images/courses-start-vlogging.jpg",
+    name: "Start Vlogging",
+    level: "Beginner",
+    chapters: [
+      {
+        id: 4,
+        course_id: 1,
+        lessons: [
+          {
+            chapter_id: 4,
+            id: 1,
+            name: "Introduction",
+            video: "MiiANxRHSv4",
+          },
+        ],
+        name: "Getting Started",
+      },
+    ],
+    total_student: 15,
+    total_videos: 1456,
+    certificate: 1,
+  },
+];
+
 export default function ListCourses() {
-  const data = [
-    {
-      thumbnail: "/images/courses-graphic-designer-101.jpg",
-      name: "Graphic Designer 101",
-      level: "All Levels",
-    },
-    {
-      thumbnail: "/images/courses-start-vlogging.jpg",
-      name: "Start Vlogging",
-      level: "Beginner",
-    },
-    {
-      thumbnail: "/images/courses-graphic-designer-101.jpg",
-      name: "Graphic Designer 101",
-      level: "All Levels",
-    },
-    {
-      thumbnail: "/images/courses-start-vlogging.jpg",
-      name: "Start Vlogging",
-      level: "Beginner",
-    },
-  ];
   return (
     <>
       <div className="flex justify-between items-center">
