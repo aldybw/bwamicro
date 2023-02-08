@@ -1,8 +1,8 @@
 import BusinessDevelopment from "../../../public/images/icon-business-development.svg";
 import ContentWriter from "../../../public/images/icon-content-writer.svg";
-import ProductAdvertisement from "../../../public/images/icon-product-advertisement.svg";
-import GameDevelopment from "../../../public/images/icon-game-development.svg";
 import CustomerRelationship from "../../../public/images/icon-customer-relationship.svg";
+import GameDevelopment from "../../../public/images/icon-game-development.svg";
+import ProductAdvertisement from "../../../public/images/icon-product-advertisement.svg";
 import TravelGuidance from "../../../public/images/icon-travel-guidance.svg";
 import RenderItem from "./RenderItem";
 

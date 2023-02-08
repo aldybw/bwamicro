@@ -1,4 +1,3 @@
-import React from "react";
 import formatThousand from "helpers/formatThousand";
 
 export default function Feature({ data }) {
