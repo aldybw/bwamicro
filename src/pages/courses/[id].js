@@ -14,6 +14,8 @@ import Playback from "../../../public/images/icon-playback.svg";
 import Feature from "parts/Details/Feature";
 import CoursePhoto from "parts/Details/CoursePhoto";
 import Footer from "parts/Footer";
+import RenderPreview from "parts/Details/RenderPreview";
+
 import { useEffect, useRef, useState } from "react";
 function DetailCourse({ data }) {
   const footer = useRef(null);
@@ -162,6 +164,19 @@ function DetailCourse({ data }) {
                   <div className="w-full text-center py-12">No Item Found</div>
                 )}
               </div>
+            </section>
+
+            <section className="mt-10">
+              <div className="font-medium text-gray-900 text-2xl mb-4">
+                You Will <span className="text-teal-500">Learn</span>
+              </div>
+              {data?.chapters?.length > 0 ? (
+                <RenderPreview previews={data.chapters}>
+                  {data.chapters}
+                </RenderPreview>
+              ) : (
+                <div className="w-full text-center py-12">No Chapter Found</div>
+              )}
             </section>
           </div>
         </div>

@@ -6,17 +6,42 @@ export const coursesData = [
     level: "All Levels",
     chapters: [
       {
-        id: 4,
+        id: 1,
         course_id: 1,
         lessons: [
           {
-            chapter_id: 4,
+            chapter_id: 1,
             id: 1,
             name: "Introduction",
             video: "MiiANxRHSv4",
           },
+          {
+            chapter_id: 1,
+            id: 2,
+            name: "Basic Concept",
+            video: "MiiANxRHSv4",
+          },
         ],
         name: "Getting Started",
+      },
+      {
+        id: 2,
+        course_id: 1,
+        lessons: [
+          {
+            chapter_id: 1,
+            id: 1,
+            name: "Backend",
+            video: "MiiANxRHSv4",
+          },
+          {
+            chapter_id: 1,
+            id: 2,
+            name: "Frontend",
+            video: "MiiANxRHSv4",
+          },
+        ],
+        name: "Bagian Praktik",
       },
     ],
     description:
