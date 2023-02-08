@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { coursesData } from "dummy/courses";
 import formatThousand from "helpers/formatThousand";
 import Head from "next/head";
@@ -177,6 +178,27 @@ function DetailCourse({ data }) {
               ) : (
                 <div className="w-full text-center py-12">No Chapter Found</div>
               )}
+            </section>
+
+            <section className="mt-10">
+              <h6 className="font-medium text-gray-900 text-2xl mb-4">
+                Our <span className="text-teal-500">Instructor</span>
+              </h6>
+              <div className="flex items-center">
+                <img
+                  src={data?.mentor?.profile ?? ""}
+                  alt={data?.mentor?.name}
+                  className="w-20 rounded-full overflow-hidden object-cover"
+                />
+                <div className="ml-4">
+                  <h2 className="text-lg text-gray-900">
+                    {data?.mentor?.name ?? "Mentor's name"}
+                  </h2>
+                  <h3 className="text-sm text-gray-600">
+                    {data?.mentor?.profession ?? "Mentor's profession"}
+                  </h3>
+                </div>
+              </div>
             </section>
           </div>
         </div>
