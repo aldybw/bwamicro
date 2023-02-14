@@ -31,8 +31,8 @@ function Home({ data }) {
           <Clients></Clients>
         </section>
         <section className="container mx-auto pt-24">
-          <ListCourses></ListCourses>
-          {/* <ListCourses data={data}></ListCourses> */}
+          {/* <ListCourses></ListCourses> */}
+          <ListCourses data={data}></ListCourses>
         </section>
         <section className="container mx-auto pt-24">
           <ListCategories></ListCategories>

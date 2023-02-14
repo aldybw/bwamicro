@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import RenderItem from "./RenderItem";
-import { coursesData as data } from "dummy/courses";
+// import { coursesData as data } from "dummy/courses";
 
-export default function ListCourses() {
+export default function ListCourses({ data }) {
   return (
     <>
       <div className="flex justify-between items-center">

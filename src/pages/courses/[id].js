@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { coursesData } from "dummy/courses";
+// import { coursesData } from "dummy/courses";
 import formatThousand from "helpers/formatThousand";
 import Head from "next/head";
 import Header from "parts/Header";
@@ -20,6 +20,7 @@ import HappyStudent from "parts/Details/HappyStudent";
 
 import { useEffect, useRef, useState } from "react";
 function DetailCourse({ data }) {
+  console.log(data);
   const footer = useRef(null);
   const [isSticky, setIsSticky] = useState(() => true);
 
@@ -227,10 +228,10 @@ function DetailCourse({ data }) {
 DetailCourse.getInitialProps = async (props) => {
   const { id } = props.query;
   try {
-    // const data = await courses.details(id);
-    // return { data };
-    const data = coursesData[id - 1];
+    const data = await courses.details(id);
     return { data };
+    // const data = coursesData[id - 1];
+    // return { data };
   } catch (error) {}
 };
 

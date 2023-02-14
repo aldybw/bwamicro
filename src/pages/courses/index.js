@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import courses from "constants/api/courses";
-import { coursesData as data } from "../../dummy/courses";
+// import { coursesData as data } from "../../dummy/courses";
 
 import Header from "parts/Header";
 import Footer from "parts/Footer";
@@ -168,9 +168,9 @@ function Courses({ data }) {
 
 Courses.getInitialProps = async () => {
   try {
-    // const data = await courses.all();
-    // return { data: data.data };
-    return { data };
+    const data = await courses.all();
+    return { data: data.data };
+    // return { data };
   } catch (error) {}
 };
 
