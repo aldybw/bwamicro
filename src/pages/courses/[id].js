@@ -20,7 +20,6 @@ import HappyStudent from "parts/Details/HappyStudent";
 
 import { useEffect, useRef, useState } from "react";
 function DetailCourse({ data }) {
-  console.log(data);
   const footer = useRef(null);
   const [isSticky, setIsSticky] = useState(() => true);
 

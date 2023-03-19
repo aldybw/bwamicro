@@ -10,7 +10,8 @@ import DefaultAvatar from "../../public/images/default-avatar.svg";
 
 export default function Header({ onLight }) {
   const [user, setUser] = useState(() => null);
-  console.log(user);
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   useEffect(() => {
     const userCookies =
       decodeURIComponent(window.document.cookie)
@@ -32,12 +33,28 @@ export default function Header({ onLight }) {
   const textCTA = router.pathname.indexOf("/login") > -1 ? "Daftar" : "Masuk";
 
   return (
-    <header className="flex justify-between items-center">
-      <div style={{ height: 54 }}>
+    <header
+      className={[
+        "flex justify-between items-center",
+        toggleMenu ? "fixed w-full -mx-4 px-4" : "",
+      ].join(" ")}
+    >
+      <div style={{ height: 54, zIndex: 50 }}>
         <Logo className="on-dark"></Logo>
       </div>
-      <ul className="flex items-center">
-        <li>
+      <div className="flex md:hidden">
+        <button
+          onClick={() => setToggleMenu((prev) => !prev)}
+          className={["toggle z-50", toggleMenu ? "active" : ""].join(" ")}
+        ></button>
+      </div>
+      <ul
+        className={[
+          "transition-all duration-200 items-center fixed inset-0 bg-indigo-1000 pt-24 md:pt-0 md:bg-transparent md:relative md:flex md:opacity-100 md:visible",
+          toggleMenu ? "opacity-100 visible z-20" : "opacity-0 invisible",
+        ].join(" ")}
+      >
+        <li className="my-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -49,7 +66,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="my-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -61,7 +78,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="my-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -73,7 +90,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="my-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -85,7 +102,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="mt-8 md:mt-0">
           {user ? (
             <a
               target="_blank"
